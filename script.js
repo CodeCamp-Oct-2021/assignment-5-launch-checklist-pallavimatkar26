@@ -10,11 +10,13 @@ window.addEventListener("load", function (e) {
          console.log(listedPlanets);
       })
       .then(function () {
-         let index = Math.floor(Math.random() * listedPlanets.length);
-         console.log(listedPlanets[index].name);
+         //  let index = Math.floor(Math.random() * listedPlanets.length);
+         //  console.log(listedPlanets[index].name);
+         let allPlanets = pickPlanet(listedPlanets)
+         console.log(allPlanets)
 
          // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
-         addDestinationInfo( listedPlanets[index].name, listedPlanets[index].diameter, listedPlanets[index].star, listedPlanets[index].distance, listedPlanets[index].moons, listedPlanets[index].image );
+         addDestinationInfo( allPlanets.name, allPlanets.diameter, allPlanets.star, allPlanets.distance, allPlanets.moons, allPlanets.image );
       });
    let fuelReady = false;
    let cargoReady = false;
